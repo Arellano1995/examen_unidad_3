@@ -44,7 +44,25 @@ Crear una carpeta llamada image_parroter donde se localizará el proyecto
 (venv) $ cd image_parroter
 (venv) $ python manage.py startapp thumbnailer
 ```
+Para integrar Celery en este proyecto de Django, agrego un nuevo módulo 
+```
+ image_parroter / image_parrroter / celery.py
+ ```
+Dentro de este nuevo módulo de Python, importamos el paquete os y la clase Celery del paquete Celery.
+```python
+# image_parroter/image_parroter/celery.py
+
+import os
+from celery import Celery
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'image_parroter.settings')
+
+celery_app = Celery('image_parroter')
+celery_app.config_from_object('django.conf:settings', namespace='CELERY')
+celery_app.autodiscover_tasks()
+```
 ## Crear Image Thumbnails con Celery
+
 Iniciar redis-server en su propia ventana de terminal
 ```
 ~/redis-5.0.6/src$ redis-server
