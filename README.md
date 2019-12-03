@@ -1,6 +1,6 @@
 # examen_unidad_3
-Examen de computo distribuido unidad 3
-Desarrollar una aplicación la cual utilice Django, Celery y Redis, esta aplicación tiene la funcionalidad de ajustar el tamaño de imagenes y guardarla en una ruta específica.
+##Examen de computo distribuido unidad 3
+- Desarrollar una aplicación la cual utilice Django, Celery y Redis, esta aplicación tiene la funcionalidad de ajustar el tamaño de imagenes y guardarla en una ruta específica.
 # Contenido
 - [Instalación de Redis](#primero-instalar-redis)
 - [Instalacion de Python Virtual Env](#instalar-python-virtual-env-y-dependencias)
