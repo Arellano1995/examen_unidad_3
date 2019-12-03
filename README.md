@@ -1,12 +1,12 @@
 # examen_unidad_3
 Examen de computo distribuido unidad 3
 
-##Primero instalar Redis 
+## Primero instalar Redis 
 $ wget http://download.redis.io/releases/redis-5.0.7.tar.gz
 $ tar xzf redis-5.0.7.tar.gz
 $ cd redis-5.0.7
 $ make
-##Instalar Python virtual env y dependencias	
+## Instalar Python virtual env y dependencias	
 Se crea un directorio llamado image_parroter donde se creará el entorno virtual	
 $ mkdir image_parroter
 $ cd image_parroter
@@ -20,7 +20,7 @@ Después de activar venv, se instalan los paquetes de Python
 (venv) $ pip3 install Django Celery redis Pillow django-widget-tweaks
 (venv) $ pip3 freeze > requirements.txt
 
-##Configurar el projecto de Django
+## Configurar el projecto de Django
 (venv) $ django-admin startproject image_parroter
 (venv) $ cd image_parroter
 (venv) $ python manage.py startapp thumbnailer
